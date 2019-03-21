@@ -2,7 +2,7 @@
   #product-list-one
     h2 Product List One
     ul
-      li(v-for='product in products')
+      li(v-for='product in saleProducts')
         span.name {{product.name}} 
         span.price €{{product.price}}
 </template>
@@ -14,6 +14,15 @@ export default {
   computed: {
       products() {
           return this.$store.state.products;
+      },
+      saleProducts() {
+          var saleProducts = this.$store.state.products.map((product) => {
+              return {
+                  name: '**'+product.name +'**',
+                  price: product.price / 2
+              }
+          })
+          return saleProducts
       }
   }
 }
