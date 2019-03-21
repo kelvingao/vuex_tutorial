@@ -16,13 +16,7 @@ export default {
           return this.$store.state.products;
       },
       saleProducts() {
-          var saleProducts = this.$store.state.products.map((product) => {
-              return {
-                  name: '**'+product.name +'**',
-                  price: product.price / 2
-              }
-          })
-          return saleProducts
+          return this.$store.getters.saleProducts
       }
   }
 }
