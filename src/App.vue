@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <production-list-one v-bind:products="products"></production-list-one>
-    <production-list-two v-bind:products="products"></production-list-two>
+    <production-list-one></production-list-one>
+    <production-list-two></production-list-two>
   </div>
 </template>
 

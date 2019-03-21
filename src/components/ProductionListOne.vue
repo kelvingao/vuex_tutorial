@@ -5,6 +5,7 @@
       li(v-for='product in saleProducts')
         span.name {{product.name}} 
         span.price €{{product.price}}
+    button(@click='reducePrice') Reduce Price
 </template>
 
 <script>
@@ -18,6 +19,13 @@ export default {
       saleProducts() {
           return this.$store.getters.saleProducts
       }
+  },
+  methods: {
+    reducePrice() {
+      this.$store.state.products.forEach((product) => {
+        product.price -= 1;
+      });
+    }
   }
 }
 </script>
