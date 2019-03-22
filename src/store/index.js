@@ -26,9 +26,12 @@ export default new Vuex.Store({
   },
   mutations: {
     reducePrice: state=> {
-      state.products.forEach((product) => {
-        product.price -= 1;
-      });
+      // simulate async operations, like communicating server
+      setTimeout(function() {
+        state.products.forEach((product) => {
+          product.price -= 1;
+        })
+      }, 3000)
     }
   },
   actions: {
