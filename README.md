@@ -1,29 +1,11 @@
 # vuex_tutorial
 
-## Project setup
-```
-npm install
-```
+## lesson-01:  [Setting up a Central Store](https://github.com/kelvingao/vuex_tutorial/tree/lesson-01)
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## lesson-02: [Getters](https://github.com/kelvingao/vuex_tutorial#lesson-02-getters)
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## lesson-03: [Mutations](https://github.com/kelvingao/vuex_tutorial#lesson-03-mutations)
 
-### Run your tests
-```
-npm run test
-```
+## lesson-04: [Actions](https://github.com/kelvingao/vuex_tutorial#lesson-04-actions)
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## lesson-05: [Mapping Actions & Getters](https://github.com/kelvingao/vuex_tutorial#lesson-05-mapping-actions--getters)
