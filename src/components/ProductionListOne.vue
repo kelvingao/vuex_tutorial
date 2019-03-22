@@ -3,29 +3,28 @@
     h2 Product List One
     ul
       li(v-for='product in saleProducts')
-        span.name {{product.name}} 
+        span.name {{product.name}}
         span.price €{{product.price}}
-    button(@click='reducePrice') Reduce Price
+    button(@click='reducePrice(4)') Reduce Price
 </template>
 
 <script>
 
-
 export default {
   computed: {
-      products() {
-          return this.$store.state.products;
-      },
-      saleProducts() {
-          return this.$store.getters.saleProducts
-      }
+    products () {
+      return this.$store.state.products
+    },
+    saleProducts () {
+      return this.$store.getters.saleProducts
+    }
   },
   methods: {
-    reducePrice() {
+    reducePrice (mount) {
       // this.$store.state.products.forEach((product) => {
       //   product.price -= 1;
       // });
-      this.$store.dispatch('reducePrice');
+      this.$store.dispatch('reducePrice', mount)
     }
   }
 }
