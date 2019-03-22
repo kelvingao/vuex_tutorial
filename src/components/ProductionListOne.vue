@@ -9,23 +9,21 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex'
 
 export default {
   computed: {
     products () {
       return this.$store.state.products
     },
-    saleProducts () {
-      return this.$store.getters.saleProducts
-    }
+    ...mapGetters([
+      'saleProducts'
+    ])
   },
   methods: {
-    reducePrice (mount) {
-      // this.$store.state.products.forEach((product) => {
-      //   product.price -= 1;
-      // });
-      this.$store.dispatch('reducePrice', mount)
-    }
+    ...mapActions([
+      'reducePrice'
+    ])
   }
 }
 </script>
