@@ -26,15 +26,17 @@ export default new Vuex.Store({
   },
   mutations: {
     reducePrice: state=> {
-      // simulate async operations, like communicating server
-      setTimeout(function() {
-        state.products.forEach((product) => {
-          product.price -= 1;
-        })
-      }, 3000)
+      state.products.forEach((product) => {
+        product.price -= 1;
+      })
     }
   },
   actions: {
-
+    reducePrice: context => {
+      // simulate async operations, like communicating server
+      setTimeout(function() {
+        context.commit('reducePrice')
+        }, 2000)
+    }
   }
 })
